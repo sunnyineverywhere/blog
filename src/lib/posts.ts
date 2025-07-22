@@ -14,6 +14,7 @@ export interface Post {
   excerpt: string;
   content: string;
   tags?: string[];
+  category?: string;
 }
 
 export async function getAllPosts(): Promise<Post[]> {
@@ -81,11 +82,23 @@ export async function getAllPosts(): Promise<Post[]> {
           excerpt: matterResult.data.excerpt || '',
           content,
           tags: matterResult.data.tags || [],
+          category: matterResult.data.category || 'General',
         };
       })
   );
 
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+export async function getAllCategories(): Promise<string[]> {
+  const posts = await getAllPosts();
+  const categories = posts.map(post => post.category || 'General');
+  return Array.from(new Set(categories)).sort();
+}
+
+export async function getPostsByCategory(category: string): Promise<Post[]> {
+  const posts = await getAllPosts();
+  return posts.filter(post => (post.category || 'General') === category);
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
@@ -144,6 +157,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       excerpt: matterResult.data.excerpt || '',
       content,
       tags: matterResult.data.tags || [],
+      category: matterResult.data.category || 'General',
     };
   } catch {
     return null;

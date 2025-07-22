@@ -3,6 +3,7 @@ title: "Essential TypeScript Tips for 2025"
 date: "2025-01-18"
 excerpt: "Master advanced TypeScript features and patterns that will make your code more robust and maintainable in 2025."
 tags: ["typescript", "javascript", "programming", "best-practices"]
+category: "Programming"
 ---
 
 # Essential TypeScript Tips for 2025

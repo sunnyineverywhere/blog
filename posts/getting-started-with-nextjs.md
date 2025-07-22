@@ -3,6 +3,7 @@ title: "Getting Started with Next.js 15: A Complete Guide"
 date: "2025-01-20"
 excerpt: "Learn how to build modern web applications with Next.js 15, featuring the new App Router, Server Components, and improved performance."
 tags: ["nextjs", "react", "web-development", "tutorial"]
+category: "Frontend"
 ---
 
 # Getting Started with Next.js 15

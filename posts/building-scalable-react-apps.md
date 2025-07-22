@@ -3,6 +3,7 @@ title: "Building Scalable React Applications: Architecture Patterns"
 date: "2025-01-15"
 excerpt: "Learn proven architectural patterns and strategies for building React applications that can scale with your team and user base."
 tags: ["react", "architecture", "scalability", "patterns"]
+category: "Architecture"
 ---
 
 # Building Scalable React Applications

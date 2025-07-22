@@ -9,10 +9,13 @@ export default function BlogHeader() {
             My Tech Blog
           </Link>
           <nav className="blog-nav flex space-x-6">
-            <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <Link href="/" className="text-gray-600 dark:text-gray-300 hover:text-slate-700 dark:hover:text-slate-300 transition-colors">
+              Home
+            </Link>
+            <Link href="/posts" className="text-gray-600 dark:text-gray-300 hover:text-slate-700 dark:hover:text-slate-300 transition-colors">
               Posts
             </Link>
-            <Link href="/about" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <Link href="/about" className="text-gray-600 dark:text-gray-300 hover:text-slate-700 dark:hover:text-slate-300 transition-colors">
               About
             </Link>
           </nav>

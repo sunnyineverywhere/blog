@@ -86,10 +86,10 @@ export default function InlineTableOfContents({
       {/* Toggle Header */}
       <button
         onClick={toggleExpanded}
-        className="w-full flex items-center justify-between p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+        className="w-full flex items-center justify-between p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-inset"
       >
         <div className="flex items-center">
-          <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
+          <div className="w-8 h-8 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center mr-3 shadow-lg">
             <svg
               className="w-4 h-4 text-white"
               fill="none"
@@ -105,7 +105,7 @@ export default function InlineTableOfContents({
             </svg>
           </div>
           <div className="text-left">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+            <h3 className="text-lg font-bold text-slate-800 dark:text-white">
               Table of Contents
             </h3>
           </div>
@@ -118,7 +118,7 @@ export default function InlineTableOfContents({
             }`}
           >
             <svg
-              className="w-5 h-5 text-gray-400"
+              className="w-5 h-5 text-slate-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -149,8 +149,8 @@ export default function InlineTableOfContents({
                   onClick={() => scrollToHeading(item.id)}
                   className={`block w-full text-left py-3 px-4 rounded-lg transition-all duration-200 ${
                     activeId === item.id
-                      ? "bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 font-medium border-l-3 border-blue-500"
-                      : "text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-200"
+                      ? "bg-slate-100 dark:bg-slate-800/60 text-slate-800 dark:text-slate-200 font-semibold border-l-3 border-slate-600"
+                      : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/50 hover:text-slate-800 dark:hover:text-slate-200"
                   }`}
                   style={{
                     paddingLeft: `${(item.level - 1) * 16 + 16}px`,
@@ -164,13 +164,13 @@ export default function InlineTableOfContents({
                 >
                   <span className="flex items-center">
                     {item.level === 1 && (
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
+                      <span className="w-2 h-2 bg-slate-700 rounded-full mr-3 flex-shrink-0"></span>
                     )}
                     {item.level === 2 && (
-                      <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-slate-600 rounded-full mr-3 flex-shrink-0"></span>
                     )}
                     {item.level >= 3 && (
-                      <span className="w-1 h-1 bg-gray-400 rounded-full mr-3 flex-shrink-0"></span>
+                      <span className="w-1 h-1 bg-slate-500 rounded-full mr-3 flex-shrink-0"></span>
                     )}
                     <span className="line-clamp-2">{item.text}</span>
                   </span>

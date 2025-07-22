@@ -3,6 +3,7 @@ title: "한국어와 영어가 함께하는 웹 개발: Modern Web Development w
 date: "2025-01-22"
 excerpt: "한국어와 영어를 함께 사용하는 웹 개발 환경에서 타이포그래피와 사용자 경험을 최적화하는 방법을 알아봅니다."
 tags: ["korean", "typography", "web-development", "i18n"]
+category: "Frontend"
 ---
 
 # 한국어와 영어가 함께하는 웹 개발
