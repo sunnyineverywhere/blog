@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), var(--font-noto-sans-kr), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, consolas, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +22,432 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Prism.js Theme - Custom Dark Theme */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #6b7280;
+}
+
+.token.punctuation {
+  color: #d1d5db;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f59e0b;
+}
+
+.token.boolean,
+.token.number {
+  color: #10b981;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #34d399;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #60a5fa;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: #a78bfa;
+}
+
+.token.keyword {
+  color: #f472b6;
+}
+
+.token.regex,
+.token.important {
+  color: #f59e0b;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* Custom Code Block Styling */
+.code-block-wrapper {
+  @apply relative mb-6 rounded-xl overflow-hidden shadow-2xl border border-gray-700;
+}
+
+.code-block-header {
+  @apply flex justify-between items-center px-4 py-2 bg-gray-800 border-b border-gray-700;
+}
+
+.code-block-language {
+  @apply text-xs font-medium text-gray-300 uppercase tracking-wide;
+}
+
+.copy-button {
+  @apply text-xs bg-gray-700 hover:bg-gray-600 text-gray-200 px-3 py-1 rounded-md transition-colors font-medium;
+}
+
+.copy-button:hover {
+  @apply bg-blue-600;
+}
+
+.copy-button.copied {
+  @apply bg-green-600 text-white;
+}
+
+.code-block-wrapper pre {
+  @apply m-0 bg-gray-900 text-gray-100 p-6 overflow-x-auto;
+}
+
+.code-block-wrapper code {
+  @apply text-sm font-mono leading-relaxed;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Inline TOC specific styles */
+.border-l-3 {
+  border-left-width: 3px;
+}
+
+/* Grid pattern for decorative backgrounds */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500 dark:bg-gray-500;
+}
+
+/* Enhanced prose animations */
+.enhanced-prose {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.enhanced-prose > * {
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.enhanced-prose h1,
+.enhanced-prose h2,
+.enhanced-prose h3,
+.enhanced-prose h4,
+.enhanced-prose h5,
+.enhanced-prose h6 {
+  position: relative;
+  scroll-margin-top: 100px;
+}
+
+.enhanced-prose h1::after,
+.enhanced-prose h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  border-radius: 2px;
+  opacity: 0;
+  animation: slideInLine 0.8s ease-out 0.3s forwards;
+}
+
+.enhanced-prose blockquote::before {
+  animation: bounceIn 0.6s ease-out 0.5s both;
+}
+
+.enhanced-prose img {
+  transition: all 0.3s ease;
+}
+
+.enhanced-prose img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.enhanced-prose a {
+  position: relative;
+  overflow: hidden;
+}
+
+.enhanced-prose a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+  transition: width 0.3s ease;
+}
+
+.enhanced-prose a:hover::after {
+  width: 100%;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLine {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 60px;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  70% {
+    opacity: 0.9;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Article stats hover effects */
+.article-stat-button {
+  transition: all 0.2s ease;
+}
+
+.article-stat-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Enhanced markdown content styling */
+.prose-paragraph {
+  margin-bottom: 2rem !important;
+  line-height: 2 !important;
+  font-size: 1.125rem !important;
+  color: rgb(55 65 81) !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.dark .prose-paragraph {
+  color: rgb(209 213 219) !important;
+}
+
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+  margin-top: 3rem !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.heading-1 {
+  font-size: 2.5rem !important;
+  margin-top: 4rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.heading-2 {
+  font-size: 2rem !important;
+  margin-top: 3.5rem !important;
+}
+
+.heading-3 {
+  font-size: 1.5rem !important;
+  margin-top: 3rem !important;
+}
+
+.enhanced-list {
+  margin: 2rem 0 !important;
+  padding-left: 2rem !important;
+}
+
+.enhanced-list li {
+  margin: 1rem 0 !important;
+  line-height: 1.8 !important;
+  font-size: 1.125rem !important;
+}
+
+.enhanced-list.numbered li {
+  padding-left: 0.5rem !important;
+}
+
+.enhanced-blockquote {
+  margin: 3rem 0 !important;
+  padding: 2rem !important;
+  font-size: 1.25rem !important;
+  line-height: 1.8 !important;
+}
+
+/* Code block improvements */
+.code-block-wrapper {
+  margin: 3rem 0 !important;
+}
+
+.code-block-wrapper pre {
+  font-size: 0.95rem !important;
+  line-height: 1.7 !important;
+  padding: 2rem !important;
+  font-family: var(--font-mono) !important;
+}
+
+/* Better spacing for various elements */
+.enhanced-prose h1 + p,
+.enhanced-prose h2 + p,
+.enhanced-prose h3 + p,
+.enhanced-prose h4 + p,
+.enhanced-prose h5 + p,
+.enhanced-prose h6 + p {
+  margin-top: 1rem !important;
+}
+
+.enhanced-prose p + h1,
+.enhanced-prose p + h2,
+.enhanced-prose p + h3,
+.enhanced-prose p + h4,
+.enhanced-prose p + h5,
+.enhanced-prose p + h6 {
+  margin-top: 4rem !important;
+}
+
+/* Advanced font styling for multilingual support */
+.font-display {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
+}
+
+.font-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-feature-settings: "kern" 1, "liga" 1, "clig" 1, "calt" 1;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+/* Korean text specific styling */
+:lang(ko) {
+  line-height: 1.8;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Enhanced readability for mixed content */
+.mixed-content {
+  font-variant-numeric: proportional-nums;
+  font-variant-ligatures: contextual;
+}
+
+/* Blog header and navigation fonts */
+.blog-header {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.blog-nav {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
