@@ -16,11 +16,11 @@ export default function AboutPage() {
       >
         <div className="max-w-4xl mx-auto py-8 px-4 print:py-6 print:px-8 print:max-w-none">
           {/* Header */}
-          <div className="bg-white print:bg-white border-b-2 border-indigo-800 print:border-b-2 print:border-black pb-6 print:pb-4">
+          <div className="bg-white print:bg-white border-b-2 border-blue-950 print:border-b-2 print:border-black pb-6 print:pb-4">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-4 print:gap-3">
               {/* Profile Image - Hidden in print */}
               <div className="relative print:hidden">
-                <div className="w-24 h-24 bg-indigo-800 rounded-lg flex items-center justify-center">
+                <div className="w-24 h-24 bg-blue-950 rounded-lg flex items-center justify-center">
                   <svg
                     className="w-12 h-12 text-white"
                     fill="none"
@@ -42,13 +42,14 @@ export default function AboutPage() {
                 <h1 className="text-3xl md:text-4xl print:text-3xl font-bold text-gray-900 print:text-black mb-1 print:mb-1">
                   Your Name
                 </h1>
-                <p className="text-lg print:text-base text-indigo-800 print:text-black font-semibold mb-2 print:mb-2">
-                  Backend Developer & Data Engineer
+                <p className="text-lg print:text-base text-blue-950 print:text-black font-semibold mb-2 print:mb-2">
+                  Aspiring Software Engineer
                 </p>
                 <p className="text-gray-600 print:text-gray-700 leading-relaxed text-sm print:text-sm max-w-2xl">
-                  Passionate developer specializing in scalable backend systems
-                  and data infrastructure. Building robust solutions that power
-                  modern applications.
+                  A recent computer science graduate with a passion for building
+                  web applications and a strong foundation in software
+                  engineering principles. Eager to apply my skills in a
+                  professional setting and contribute to a talented team.
                 </p>
               </div>
             </div>
@@ -57,7 +58,7 @@ export default function AboutPage() {
             <div className="mt-4 print:mt-3 pt-4 print:pt-3 border-t border-gray-200 print:border-gray-300">
               <div className="grid grid-cols-1 md:grid-cols-3 print:grid-cols-3 gap-3 print:gap-2 text-sm print:text-sm">
                 <div className="flex items-center gap-2">
-                  <span className="text-indigo-800 print:text-black font-medium">
+                  <span className="text-blue-950 print:text-black font-medium">
                     Email:
                   </span>
                   <span className="text-gray-900 print:text-black">
@@ -65,7 +66,7 @@ export default function AboutPage() {
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-indigo-800 print:text-black font-medium">
+                  <span className="text-blue-950 print:text-black font-medium">
                     Location:
                   </span>
                   <span className="text-gray-900 print:text-black">
@@ -73,7 +74,7 @@ export default function AboutPage() {
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-indigo-800 print:text-black font-medium">
+                  <span className="text-blue-950 print:text-black font-medium">
                     Website:
                   </span>
                   <span className="text-gray-900 print:text-black">
@@ -86,88 +87,85 @@ export default function AboutPage() {
 
           {/* Main Content */}
           <div className="bg-white dark:bg-gray-800 print:bg-white print:shadow-none">
-            {/* Experience Section */}
+            {/* Projects Section */}
             <div className="p-6 print:p-4 border-b border-gray-200 print:border-gray-300">
-              <h2 className="text-xl print:text-lg font-bold text-gray-900 print:text-black mb-4 print:mb-3 border-b-2 border-indigo-800 print:border-black pb-2 print:pb-1">
-                EXPERIENCE
+              <h2 className="text-xl print:text-lg font-bold text-gray-900 print:text-black mb-4 print:mb-3 border-b-2 border-blue-950 print:border-black pb-2 print:pb-1">
+                KEY PROJECTS
               </h2>
-
               <div className="space-y-4 print:space-y-3">
-                {/* Job 1 */}
-                <div className="border-l-2 border-indigo-800 print:border-black pl-4 print:pl-3">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 print:mb-1">
-                    <h3 className="text-lg print:text-base font-bold text-gray-900 print:text-black">
-                      Senior Backend Developer
-                    </h3>
-                    <span className="text-indigo-800 print:text-black font-semibold text-sm print:text-sm">
-                      2022 - Present
-                    </span>
-                  </div>
-                  <p className="text-base print:text-sm text-gray-700 print:text-black font-medium mb-2 print:mb-1">
-                    Company Name
+                {/* Project 1 */}
+                <div className="border-l-2 border-blue-950 print:border-black pl-4 print:pl-3">
+                  <h3 className="text-lg print:text-base font-bold text-gray-900 print:text-black">
+                    E-commerce Platform API
+                  </h3>
+                  <p className="text-sm print:text-xs text-gray-600 print:text-gray-700 mb-1">
+                    Developed a RESTful API for a mock e-commerce platform,
+                    handling user authentication, product catalog, and order
+                    processing.
                   </p>
-                  <ul className="space-y-1 print:space-y-0 text-sm print:text-xs text-gray-600 print:text-gray-700">
+                  <ul className="list-disc list-inside text-sm print:text-xs text-gray-600 print:text-gray-700 mb-1">
                     <li>
-                      • Led development of microservices architecture serving
-                      1M+ users
+                      Implemented JWT-based authentication and authorization.
                     </li>
                     <li>
-                      • Designed and implemented RESTful APIs with 99.9% uptime
+                      Designed and built a database schema for products, users,
+                      and orders.
                     </li>
                     <li>
-                      • Optimized database performance, reducing query times by
-                      60%
-                    </li>
-                    <li>
-                      • Mentored junior developers and conducted code reviews
+                      Wrote unit and integration tests to ensure API
+                      reliability.
                     </li>
                   </ul>
+                  <p className="text-xs print:text-xs text-blue-950 print:text-black">
+                    Python, FastAPI, PostgreSQL, Docker
+                  </p>
                 </div>
 
-                {/* Job 2 */}
-                <div className="border-l-2 border-indigo-800 print:border-black pl-4 print:pl-3">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 print:mb-1">
-                    <h3 className="text-lg print:text-base font-bold text-gray-900 print:text-black">
-                      Data Engineer
-                    </h3>
-                    <span className="text-indigo-800 print:text-black font-semibold text-sm print:text-sm">
-                      2020 - 2022
-                    </span>
-                  </div>
-                  <p className="text-base print:text-sm text-gray-700 print:text-black font-medium mb-2 print:mb-1">
-                    Previous Company
+                {/* Project 2 */}
+                <div className="border-l-2 border-blue-950 print:border-black pl-4 print:pl-3">
+                  <h3 className="text-lg print:text-base font-bold text-gray-900 print:text-black">
+                    Real-time Analytics Dashboard
+                  </h3>
+                  <p className="text-sm print:text-xs text-gray-600 print:text-gray-700 mb-1">
+                    Built a real-time data pipeline and dashboard to visualize
+                    user activity on a web application.
                   </p>
-                  <ul className="space-y-1 print:space-y-0 text-sm print:text-xs text-gray-600 print:text-gray-700">
-                    <li>• Built ETL pipelines processing 10TB+ data daily</li>
+                  <ul className="list-disc list-inside text-sm print:text-xs text-gray-600 print:text-gray-700 mb-1">
                     <li>
-                      • Implemented real-time streaming solutions using Apache
-                      Kafka
+                      Set up a data stream with Kafka and processed events with
+                      Spark Streaming.
                     </li>
                     <li>
-                      • Developed data warehouse architecture on cloud platforms
+                      Developed a web-based dashboard using React and WebSockets
+                      to display live data.
                     </li>
-                    <li>• Created automated monitoring and alerting systems</li>
+                    <li>
+                      Deployed the application to AWS using Docker and EC2.
+                    </li>
                   </ul>
+                  <p className="text-xs print:text-xs text-blue-950 print:text-black">
+                    Apache Kafka, Spark, React, AWS, Docker
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Skills Section */}
             <div className="p-6 print:p-4 border-b border-gray-200 print:border-gray-300">
-              <h2 className="text-xl print:text-lg font-bold text-gray-900 print:text-black mb-4 print:mb-3 border-b-2 border-indigo-800 print:border-black pb-2 print:pb-1">
+              <h2 className="text-xl print:text-lg font-bold text-gray-900 print:text-black mb-4 print:mb-3 border-b-2 border-blue-950 print:border-black pb-2 print:pb-1">
                 TECHNICAL SKILLS
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 print:grid-cols-3 gap-4 print:gap-3 text-sm print:text-xs">
                 {/* Programming Languages */}
                 <div>
-                  <h3 className="font-bold text-indigo-800 print:text-black mb-2 print:mb-1">
+                  <h3 className="font-bold text-blue-950 print:text-black mb-2 print:mb-1">
                     Languages
                   </h3>
                   <ul className="space-y-1 print:space-y-0 text-gray-700 print:text-black">
-                    <li>• Python (Expert)</li>
-                    <li>• JavaScript (Advanced)</li>
-                    <li>• Java (Advanced)</li>
+                    <li>• Python (Proficient)</li>
+                    <li>• JavaScript (Proficient)</li>
+                    <li>• Java</li>
                     <li>• TypeScript</li>
                     <li>• SQL</li>
                   </ul>
@@ -175,96 +173,78 @@ export default function AboutPage() {
 
                 {/* Frameworks */}
                 <div>
-                  <h3 className="font-bold text-indigo-800 print:text-black mb-2 print:mb-1">
+                  <h3 className="font-bold text-blue-950 print:text-black mb-2 print:mb-1">
                     Frameworks
                   </h3>
                   <ul className="space-y-1 print:space-y-0 text-gray-700 print:text-black">
                     <li>• FastAPI</li>
                     <li>• Django</li>
-                    <li>• Flask</li>
+                    <li>• React</li>
                     <li>• Node.js</li>
-                    <li>• Spring Boot</li>
                   </ul>
                 </div>
 
                 {/* Tools & Technologies */}
                 <div>
-                  <h3 className="font-bold text-indigo-800 print:text-black mb-2 print:mb-1">
+                  <h3 className="font-bold text-blue-950 print:text-black mb-2 print:mb-1">
                     Technologies
                   </h3>
                   <ul className="space-y-1 print:space-y-0 text-gray-700 print:text-black">
-                    <li>• Docker & Kubernetes</li>
+                    <li>• Docker</li>
                     <li>• AWS / GCP</li>
                     <li>• PostgreSQL / MongoDB</li>
-                    <li>• Redis / ElasticSearch</li>
+                    <li>• Git & GitHub</li>
                     <li>• Apache Kafka</li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* Education & Projects Combined Section */}
-            <div className="p-6 print:p-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-6 print:gap-4">
-                {/* Education */}
-                <div>
-                  <h2 className="text-xl print:text-lg font-bold text-gray-900 print:text-black mb-4 print:mb-3 border-b-2 border-indigo-800 print:border-black pb-2 print:pb-1">
-                    EDUCATION
-                  </h2>
-                  <div className="border-l-2 border-indigo-800 print:border-black pl-4 print:pl-3">
-                    <div className="flex flex-col mb-2 print:mb-1">
-                      <h3 className="text-lg print:text-base font-bold text-gray-900 print:text-black">
-                        Computer Science, Bachelor&apos;s
-                      </h3>
-                      <span className="text-indigo-800 print:text-black font-semibold text-sm print:text-sm">
-                        2016 - 2020
-                      </span>
-                    </div>
-                    <p className="text-base print:text-sm text-gray-700 print:text-black font-medium mb-2 print:mb-1">
-                      University Name
-                    </p>
-                    <p className="text-sm print:text-xs text-gray-600 print:text-gray-700">
-                      Focused on software engineering, data structures,
-                      algorithms, and database systems. Graduated Magna Cum
-                      Laude (GPA 3.8/4.0)
-                    </p>
-                  </div>
+            {/* Education Section */}
+            <div className="p-6 print:p-4 border-b border-gray-200 print:border-gray-300">
+              <h2 className="text-xl print:text-lg font-bold text-gray-900 print:text-black mb-4 print:mb-3 border-b-2 border-blue-950 print:border-black pb-2 print:pb-1">
+                EDUCATION
+              </h2>
+              <div className="border-l-2 border-blue-950 print:border-black pl-4 print:pl-3">
+                <div className="flex flex-col mb-2 print:mb-1">
+                  <h3 className="text-lg print:text-base font-bold text-gray-900 print:text-black">
+                    Bachelor of Science in Computer Science
+                  </h3>
+                  <span className="text-blue-950 print:text-black font-semibold text-sm print:text-sm">
+                    2020 - 2024
+                  </span>
                 </div>
+                <p className="text-base print:text-sm text-gray-700 print:text-black font-medium mb-2 print:mb-1">
+                  University Name
+                </p>
+                <p className="text-sm print:text-xs text-gray-600 print:text-gray-700">
+                  Relevant Coursework: Data Structures, Algorithms, Web
+                  Development, Database Systems, Software Engineering
+                </p>
+              </div>
+            </div>
 
-                {/* Projects */}
-                <div>
-                  <h2 className="text-xl print:text-lg font-bold text-gray-900 print:text-black mb-4 print:mb-3 border-b-2 border-indigo-800 print:border-black pb-2 print:pb-1">
-                    KEY PROJECTS
-                  </h2>
-                  <div className="space-y-3 print:space-y-2">
-                    {/* Project 1 */}
-                    <div className="border-l-2 border-indigo-800 print:border-black pl-4 print:pl-3">
-                      <h3 className="text-base print:text-sm font-bold text-gray-900 print:text-black">
-                        E-commerce Platform API
-                      </h3>
-                      <p className="text-sm print:text-xs text-gray-600 print:text-gray-700 mb-1">
-                        Microservices architecture handling 100K+ daily
-                        transactions with real-time inventory management.
-                      </p>
-                      <p className="text-xs print:text-xs text-indigo-800 print:text-black">
-                        Python, FastAPI, PostgreSQL
-                      </p>
-                    </div>
-
-                    {/* Project 2 */}
-                    <div className="border-l-2 border-indigo-800 print:border-black pl-4 print:pl-3">
-                      <h3 className="text-base print:text-sm font-bold text-gray-900 print:text-black">
-                        Real-time Analytics Pipeline
-                      </h3>
-                      <p className="text-sm print:text-xs text-gray-600 print:text-gray-700 mb-1">
-                        ETL pipeline processing 1TB+ data daily with Apache
-                        Kafka and Spark for business intelligence.
-                      </p>
-                      <p className="text-xs print:text-xs text-indigo-800 print:text-black">
-                        Apache Kafka, Spark, AWS
-                      </p>
-                    </div>
-                  </div>
+            {/* Certifications Section */}
+            <div className="p-6 print:p-4">
+              <h2 className="text-xl print:text-lg font-bold text-gray-900 print:text-black mb-4 print:mb-3 border-b-2 border-blue-950 print:border-black pb-2 print:pb-1">
+                CERTIFICATIONS
+              </h2>
+              <div className="space-y-3 print:space-y-2">
+                <div className="border-l-2 border-blue-950 print:border-black pl-4 print:pl-3">
+                  <h3 className="text-base print:text-sm font-bold text-gray-900 print:text-black">
+                    AWS Certified Cloud Practitioner
+                  </h3>
+                  <p className="text-sm print:text-xs text-gray-600 print:text-gray-700">
+                    Issued by Amazon Web Services, 2023
+                  </p>
+                </div>
+                <div className="border-l-2 border-blue-950 print:border-black pl-4 print:pl-3">
+                  <h3 className="text-base print:text-sm font-bold text-gray-900 print:text-black">
+                    Oracle Certified Associate, Java SE 8 Programmer
+                  </h3>
+                  <p className="text-sm print:text-xs text-gray-600 print:text-gray-700">
+                    Issued by Oracle, 2022
+                  </p>
                 </div>
               </div>
             </div>
