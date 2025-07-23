@@ -214,7 +214,7 @@ export default function AboutPage() {
                   <div className="border-l-2 border-indigo-800 print:border-black pl-4 print:pl-3">
                     <div className="flex flex-col mb-2 print:mb-1">
                       <h3 className="text-lg print:text-base font-bold text-gray-900 print:text-black">
-                        Computer Science, Bachelor's
+                        Computer Science, Bachelor&apos;s
                       </h3>
                       <span className="text-indigo-800 print:text-black font-semibold text-sm print:text-sm">
                         2016 - 2020
