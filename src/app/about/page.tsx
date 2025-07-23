@@ -1,5 +1,4 @@
 import BlogLayout from "@/components/blog-layout";
-import Link from "next/link";
 import PrintButton from "@/components/print-button";
 
 export default function AboutPage() {
