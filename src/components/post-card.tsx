@@ -21,7 +21,7 @@ export default function PostCard({ post }: PostCardProps) {
       
       {/* Content */}
       <div className="relative z-10">
-        <Link href={`/posts/${post.slug}`} className="block">
+        <Link href={`/post/${post.slug}`} className="block">
           {/* Meta info */}
           <div className="flex items-center gap-3 mb-4">
             <time className="text-sm font-medium text-slate-700 dark:text-slate-300 bg-slate-50 dark:bg-slate-900/30 px-3 py-1 rounded-full">

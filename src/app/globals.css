@@ -503,3 +503,131 @@ html {
 .delay-700 {
   animation-delay: 700ms;
 }
+
+/* Custom scrollbar for log viewer */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #374151;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Log viewer inline code styling */
+.inline-code {
+  @apply bg-gray-800 text-green-300 px-1 py-0.5 rounded text-xs font-mono;
+}
+
+/* Enhanced log viewer scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Markdown-like log entry animations */
+.log-entry-enter {
+  animation: slideInFromTop 0.3s ease-out;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced prose styling for log content */
+.log-prose {
+  font-family: var(--font-sans);
+  line-height: 1.75;
+}
+
+.log-prose h1,
+.log-prose h2,
+.log-prose h3,
+.log-prose h4,
+.log-prose h5,
+.log-prose h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.log-prose h1 {
+  font-size: 1.875rem;
+}
+
+.log-prose h2 {
+  font-size: 1.5rem;
+}
+
+.log-prose h3 {
+  font-size: 1.25rem;
+}
+
+.log-prose p {
+  margin-bottom: 1.25rem;
+}
+
+.log-prose ul,
+.log-prose ol {
+  margin: 1.25rem 0;
+  padding-left: 1.625rem;
+}
+
+.log-prose li {
+  margin: 0.5rem 0;
+}
+
+.log-prose blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  font-style: italic;
+  border-left: 4px solid #3b82f6;
+}
+
+.log-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.log-prose pre {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.log-prose pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.875rem;
+}

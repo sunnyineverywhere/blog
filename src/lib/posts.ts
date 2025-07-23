@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import { highlightCode } from './syntax-highlighter';
+import { getAllCategoryNames, isValidCategory, DEFAULT_CATEGORY } from './categories';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -82,7 +83,9 @@ export async function getAllPosts(): Promise<Post[]> {
           excerpt: matterResult.data.excerpt || '',
           content,
           tags: matterResult.data.tags || [],
-          category: matterResult.data.category || 'General',
+          category: isValidCategory(matterResult.data.category) 
+            ? matterResult.data.category 
+            : DEFAULT_CATEGORY,
         };
       })
   );
@@ -91,9 +94,7 @@ export async function getAllPosts(): Promise<Post[]> {
 }
 
 export async function getAllCategories(): Promise<string[]> {
-  const posts = await getAllPosts();
-  const categories = posts.map(post => post.category || 'General');
-  return Array.from(new Set(categories)).sort();
+  return getAllCategoryNames();
 }
 
 export async function getPostsByCategory(category: string): Promise<Post[]> {
@@ -157,7 +158,9 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
       excerpt: matterResult.data.excerpt || '',
       content,
       tags: matterResult.data.tags || [],
-      category: matterResult.data.category || 'General',
+      category: isValidCategory(matterResult.data.category) 
+        ? matterResult.data.category 
+        : DEFAULT_CATEGORY,
     };
   } catch {
     return null;
