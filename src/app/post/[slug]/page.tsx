@@ -4,11 +4,29 @@ import ReadingProgress from "@/components/reading-progress";
 import CodeCopy from "@/components/code-copy";
 import InlineTableOfContents from "@/components/inline-table-of-contents";
 import { getPostBySlug, getAllPosts } from "@/lib/posts";
+import type { Metadata } from "next";
 
 interface PostPageProps {
   params: Promise<{
     slug: string;
   }>;
+}
+
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  
+  if (!post) {
+    return {
+      title: "Post Not Found - higher ideal",
+      description: "요청하신 포스트를 찾을 수 없습니다",
+    };
+  }
+
+  return {
+    title: `${post.title} - higher ideal`,
+    description: post.excerpt || `${post.title}에 대한 개발 블로그 포스트`,
+  };
 }
 
 export async function generateStaticParams() {

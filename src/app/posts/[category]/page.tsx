@@ -10,11 +10,29 @@ import {
   getAllCategorySlugs,
   CategoryConfig,
 } from "@/lib/categories";
+import type { Metadata } from "next";
 
 interface CategoryPageProps {
   params: Promise<{
     category: string;
   }>;
+}
+
+export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
+  const { category: categorySlug } = await params;
+  const categoryConfig = getCategoryBySlug(categorySlug);
+  
+  if (!categoryConfig) {
+    return {
+      title: "Category Not Found - higher ideal",
+      description: "요청하신 카테고리를 찾을 수 없습니다",
+    };
+  }
+
+  return {
+    title: `${categoryConfig.name} - higher ideal`,
+    description: `${categoryConfig.name} 카테고리의 개발 블로그 포스트 모음`,
+  };
 }
 
 export async function generateStaticParams() {

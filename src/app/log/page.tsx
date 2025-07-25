@@ -3,6 +3,12 @@ import LogViewer from "@/components/log-viewer";
 import { parseLogFile } from "@/lib/log-parser";
 import { getCategoryBySlug } from "@/lib/categories";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Log - higher ideal",
+  description: "개발 로그 및 일상 기록 - 개발 과정과 학습 내용 공유",
+};
 
 export default async function LogPage() {
   const logData = await parseLogFile();

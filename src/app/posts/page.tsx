@@ -3,6 +3,12 @@ import PostCard from "@/components/post-card";
 import { getAllPosts, getAllCategories } from "@/lib/posts";
 import CategoryFilter from "@/components/category-filter";
 import { Suspense } from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Posts - higher ideal",
+  description: "백엔드 개발 기술 블로그 포스트 - Spring Boot, AWS, Kafka 등 개발 경험과 지식 공유",
+};
 
 export default async function PostsPage() {
   const posts = await getAllPosts();
