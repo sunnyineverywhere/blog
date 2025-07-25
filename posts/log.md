@@ -10,6 +10,16 @@ tags: ["development", "progress", "notes"]
 
 This log documents the journey of building and improving this technical blog.
 
+## 2025-07-25 | Update About Page
+
+About Page가 포트폴리오처럼 보일 수 있도록 UI를 업데이트했다.
+
+Key features added:
+
+- About Page 디자인 업데이트
+- 기본 Font를 Gmarket Sans로 변경
+- 헤더 아이콘,
+
 ## 2025-07-23 | Initial Blog Setup
 
 Claude code와 함께 Next.js 15, tailwind css로 기술블로그 UI를 만들었다.
