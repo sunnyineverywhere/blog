@@ -22,8 +22,11 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "My Tech Blog",
-  description: "A modern technical blog exploring web development, programming, and technology",
+  title: "higher ideal",
+  description: "이선의 개발 블로그",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
