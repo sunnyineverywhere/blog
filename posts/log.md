@@ -18,7 +18,7 @@ Key features added:
 
 - About Page 디자인 업데이트
 - 기본 Font를 Gmarket Sans로 변경
-- 헤더 아이콘,
+- 헤더 아이콘, 페이지 파비콘, 페이지 타이틀 디자인 적용
 
 ## 2025-07-23 | Initial Blog Setup
 
