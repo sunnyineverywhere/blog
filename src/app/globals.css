@@ -399,6 +399,18 @@ html {
   margin: 1rem 0 !important;
   line-height: 1.8 !important;
   font-size: 1.125rem !important;
+  list-style: none !important; /* 기본 불릿 제거 */
+  position: relative; /* ::before 요소를 위한 포지셔닝 */
+  padding-left: 1.5rem !important; /* 가상 요소 불릿을 위한 공간 확보 */
+}
+
+.enhanced-list li::before {
+  content: "•"; /* 불릿 문자 설정 */
+  color: inherit; /* 부모 요소의 색상 상속 */
+  position: absolute;
+  left: 0;
+  font-size: 1rem !important; /* 고정된 불릿 크기 */
+  line-height: 1.8 !important; /* 텍스트와 정렬 */
 }
 
 .enhanced-list.numbered li {
