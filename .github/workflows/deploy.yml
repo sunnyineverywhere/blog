@@ -29,8 +29,10 @@ jobs:
       - name: Add .nojekyll file
         run: touch out/.nojekyll
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy to sunnyineverywhrere.github.io
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: out
-          branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          external_repository: sunnyineverywhrere/sunnyineverywhrere.github.io
+          publish_branch: main
