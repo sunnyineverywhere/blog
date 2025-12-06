@@ -29,10 +29,10 @@ jobs:
       - name: Add .nojekyll file
         run: touch out/.nojekyll
 
-      - name: Deploy to sunnyineverywhrere.github.io
+      - name: Deploy to sunnyineverywhere.github.io
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: ./out
-          external_repository: sunnyineverywhere/sunnyineverywhrere.github.io
+          external_repository: sunnyineverywhere/sunnyineverywhere.github.io
           publish_branch: main
