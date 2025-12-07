@@ -44,11 +44,60 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Nextra Sidebar Customization */
-.nextra-sidebar-container {
+/* Nextra Sidebar Customization - Force visibility */
+.nextra-sidebar-container,
+[data-nextra-sidebar],
+.nextra-sidebar,
+aside[class*="sidebar"],
+nav[class*="sidebar"],
+.nextra-nav-container,
+.nextra-nav-container > nav,
+.nextra-nav-container > aside {
   display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   background: var(--bg-primary);
   border-right: 1px solid var(--border);
+  width: 16rem;
+  min-width: 16rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Force sidebar visibility for wiki pages */
+html[data-pathname^="/wiki"] .nextra-sidebar-container,
+html[data-pathname^="/wiki"] [data-nextra-sidebar],
+html[data-pathname^="/wiki"] .nextra-sidebar,
+body[data-pathname^="/wiki"] .nextra-sidebar-container,
+body[data-pathname^="/wiki"] [data-nextra-sidebar],
+body[data-pathname^="/wiki"] .nextra-sidebar {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure main content has proper layout with sidebar */
+.nextra-container,
+.nextra-container > div {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.nextra-main,
+.nextra-container > main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Ensure sidebar is always visible on wiki pages */
+body:has([href*="/wiki"]) .nextra-sidebar-container,
+body:has([href*="/wiki"]) [data-nextra-sidebar],
+body:has([href*="/wiki"]) .nextra-sidebar {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Sidebar navigation links */

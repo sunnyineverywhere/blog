@@ -18,7 +18,7 @@ export default function HomePage() {
         {/* Navigation Cards */}
         <div className="grid md:grid-cols-3 gap-6 mt-16">
           <a 
-            href="/docs" 
+            href="/wiki" 
             className="group relative p-8 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-lg"
           >
             <div className="space-y-4">
