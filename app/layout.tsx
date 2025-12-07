@@ -1,26 +1,61 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Noto_Sans_KR } from "next/font/google";
+import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 import { Layout, Navbar, Footer } from "nextra-theme-docs";
 import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+const ibmPlexSansKR = localFont({
+  src: [
+    {
+      path: "../node_modules/@ibm/plex-sans-kr/fonts/complete/woff2/hinted/IBMPlexSansKR-Thin.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/@ibm/plex-sans-kr/fonts/complete/woff2/hinted/IBMPlexSansKR-ExtraLight.woff2",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/@ibm/plex-sans-kr/fonts/complete/woff2/hinted/IBMPlexSansKR-Light.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/@ibm/plex-sans-kr/fonts/complete/woff2/hinted/IBMPlexSansKR-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/@ibm/plex-sans-kr/fonts/complete/woff2/hinted/IBMPlexSansKR-Text.woff2",
+      weight: "450",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/@ibm/plex-sans-kr/fonts/complete/woff2/hinted/IBMPlexSansKR-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/@ibm/plex-sans-kr/fonts/complete/woff2/hinted/IBMPlexSansKR-SemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/@ibm/plex-sans-kr/fonts/complete/woff2/hinted/IBMPlexSansKR-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-ibm-plex-sans-kr",
   display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const notoSansKR = Noto_Sans_KR({
-  variable: "--font-noto-sans-kr",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -49,7 +84,7 @@ export default async function RootLayout({
   return (
     <html lang="ko" dir="ltr" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} ${notoSansKR.variable} antialiased`}
+        className={`${ibmPlexSansKR.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <Layout
           navbar={navbar}

@@ -7,8 +7,4 @@ export default {
     title: "Blog",
     type: "page",
   },
-  about: {
-    title: "About",
-    type: "page",
-  },
 };
