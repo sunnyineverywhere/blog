@@ -1,2 +1,140 @@
 @import "tailwindcss";
 @import "../styles/nextra.css";
+
+/* Home Page Styles */
+.home-page {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.home-container {
+  max-width: 48rem;
+  width: 100%;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #6b7280;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: #9ca3af;
+  max-width: 42rem;
+  margin: 1.5rem auto 0;
+}
+
+.nav-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.nav-card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: block;
+}
+
+.nav-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-icon {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.nav-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.nav-card:hover .nav-title {
+  color: #374151;
+}
+
+.nav-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.nav-arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #9ca3af;
+  font-size: 1.25rem;
+}
+
+.nav-card:hover .nav-arrow {
+  color: #6b7280;
+}
+
+/* Dark mode styles */
+.dark .hero-subtitle {
+  color: #9ca3af;
+}
+
+.dark .hero-description {
+  color: #6b7280;
+}
+
+.dark .nav-card {
+  border-color: #374151;
+  background-color: #1f2937;
+}
+
+.dark .nav-card:hover {
+  border-color: #4b5563;
+}
+
+.dark .nav-title {
+  color: #f9fafb;
+}
+
+.dark .nav-card:hover .nav-title {
+  color: #d1d5db;
+}
+
+.dark .nav-description {
+  color: #9ca3af;
+}
+
+.dark .nav-arrow {
+  color: #6b7280;
+}
+
+.dark .nav-card:hover .nav-arrow {
+  color: #9ca3af;
+}

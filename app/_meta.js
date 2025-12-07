@@ -1,6 +1,6 @@
 export default {
   docs: {
-    title: "Documentation",
+    title: "Wiki",
     type: "page",
   },
   blog: {

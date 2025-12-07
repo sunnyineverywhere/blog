@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ibm/plex-sans-kr": "^1.1.0",
     "@tailwindcss/typography": "^0.5.16",
     "gray-matter": "^4.0.3",
     "next": "15.4.2",
