@@ -1,12 +1,6 @@
----
-title: "StringBuilder와 StringBuffer"
-date: "2025-07-26"
-tags: ["Java", "StringBuilder", "StringBuffer", "Algorithm"]
----
-
 # StringBuilder와 StringBuffer
 
-String과, StringBuilder & StringBuffer의 차이에 대해 알아본다.
+`String`과 `StringBuilder` & `StringBuffer`의 차이에 대해 알아본다.
 
 ## 공통점
 
@@ -15,24 +9,24 @@ String과, StringBuilder & StringBuffer의 차이에 대해 알아본다.
 
 ## StringBuffer
 
-- 동기화 지원
+- **동기화 지원**
 - 모든 메서드가 `synchronized` 키워드로 동기화되어있음
   ⇒ 동기화 오버로드 때문에 `StringBuilder` 보다는 느림
 - 멀티스레드 환경에서 여러 스레드가 동시에 문자열을 조작해야할 때 사용
 
 ## StringBuilder
 
-- 동기화 미지원
+- **동기화 미지원**
 - 빠름
 
 ## 어떻게 String보다 빠를 수 있는걸까
 
-**1) 내부 버퍼를 사용한다.**
+### 1) 내부 버퍼를 사용한다
 
 - 내부에 `char[]` 형태의, 실제 문자열 길이보다 여유 있는 크기의 버퍼를 사용함
 - 문자열 추가/변경 시 `char[]`를 직접 조작함
 
-**2) 메모리 재할당 & 데이터 복사 시 효율성**
+### 2) 메모리 재할당 & 데이터 복사 시 효율성
 
 - `String`은 새로 문자열을 변경할 때마다 새로 배열을 할당하고 이전 내용을 통째로 복사함(메모리 비용이 크다)
 - `StringBuffer`, `StringBuilder`의 경우 기존 버퍼에 새로운 문자열을 이어붙인다
@@ -46,4 +40,4 @@ String과, StringBuilder & StringBuffer의 차이에 대해 알아본다.
 5. 템플릿 엔진의 내부 동작
 6. 데이터 파싱 및 포맷
 
-생각보다 쓸 일이 많고 생각 없이 썼던 적도 많다. (특히 1, 2)
+> 💡 **참고**: 생각보다 쓸 일이 많고 생각 없이 썼던 적도 많다. (특히 1, 2)
